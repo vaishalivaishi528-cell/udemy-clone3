@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Udemy Clone</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <header class="navbar">
+        <a href="#" class="logo">Udemy</a>
+        <a href="#" class="categories">Categories</a>
+
+        <form class="search-box">
+            <span>⌕</span>
+            <input type="search" placeholder="Search for anything">
+        </form>
+
+        <a href="#courses">Explore Courses</a>
+        <a href="#topics">Teach</a>
+        <button class="login-btn">Log in</button>
+        <button class="signup-btn">Sign up</button>
+    </header>
+
+    <!-- Menu Bar -->
+    <nav class="menu-bar">
+        <a href="#courses">Development</a>
+        <a href="#courses">Business</a>
+        <a href="#courses">IT & Software</a>
+        <a href="#courses">Design</a>
+        <a href="#courses">Marketing</a>
+        <a href="#courses">Personal Development</a>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div>
+            <img src="imges/c1.jpg" alt="Hero Banner" class="hero-img">
+            <a class="explore-btn" href="#courses">Explore Courses</a>
+        </div>
+    </section>
+
+    <!-- Recommended Courses -->
+    <main>
+        <section class="section" id="courses">
+            <h2>Recommended Courses</h2>
+            <p class="subtitle">Learn the skills you need to reach your goals.</p>
+
+            <div class="course-grid">
+                <article class="course-card">
+                    <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=500" alt="Web development course">
+                    <div class="course-info">
+                        <h3>Web Development Bootcamp</h3>
+                        <p>Learn HTML, CSS and JavaScript.</p>
+                        <p class="rating">4.7 ★★★★★</p>
+                        <strong>₹499</strong>
+                    </div>
+                </article>
+
+                <article class="course-card">
+                    <img src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?w=500" alt="Python programming course">
+                    <div class="course-info">
+                        <h3>Python Programming</h3>
+                        <p>Start coding with Python.</p>
+                        <p class="rating">4.8 ★★★★★</p>
+                        <strong>₹599</strong>
+                    </div>
+                </article>
+
+                <article class="course-card">
+                    <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=500" alt="Data analytics course">
+                    <div class="course-info">
+                        <h3>Data Analytics</h3>
+                        <p>Understand data and analytics.</p>
+                        <p class="rating">4.6 ★★★★★</p>
+                        <strong>₹699</strong>
+                    </div>
+                </article>
+
+                <article class="course-card">
+                    <img src="https://images.unsplash.com/photo-1558655146-d09347e92766?w=500" alt="Graphic design course">
+                    <div class="course-info">
+                        <h3>Graphic Design</h3>
+                        <p>Learn creative design skills.</p>
+                        <p class="rating">4.5 ★★★★★</p>
+                        <strong>₹449</strong>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Recommended Topics -->
+        <section class="section topics-section" id="topics">
+            <h2>Recommended Topics</h2>
+            <p class="subtitle">What would you like to learn next?</p>
+
+            <form class="topic-form" onsubmit="suggestTopic(event)">
+                <input id="topic-input" type="text"
+                       placeholder="Enter a topic, e.g. Full Stack Development"
+                       required>
+                <button type="submit">Suggest</button>
+            </form>
+            <p id="topic-message" aria-live="polite"></p>
+
+            <div class="topic-list">
+                <span>Python</span>
+                <span>Web Development</span>
+                <span>JavaScript</span>
+                <span>Data Science</span>
+                <span>UI/UX Design</span>
+                <span>Artificial Intelligence</span>
+            </div>
+        </section>
+
+        <!-- Popular Courses -->
+        <section class="section">
+            <h2>Popular Courses</h2>
+            <p class="subtitle">Courses learners are interested in.</p>
+
+            <div class="course-grid">
+                <article class="course-card">
+                    <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=500" alt="Coding on a laptop">
+                    <div class="course-info">
+                        <h3>The Complete Coding Course</h3>
+                        <p>Practice programming fundamentals.</p>
+                        <p class="rating">4.8 ★★★★★</p>
+                        <p>12,500 learners</p>
+                        <strong>₹549</strong>
+                    </div>
+                </article>
+
+                <article class="course-card">
+                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=500" alt="Data charts">
+                    <div class="course-info">
+                        <h3>Business Analytics</h3>
+                        <p>Learn data-driven decision making.</p>
+                        <p class="rating">4.6 ★★★★★</p>
+                        <p>8,200 learners</p>
+                        <strong>₹649</strong>
+                    </div>
+                </article>
+
+                <article class="course-card">
+                    <img src="https://images.unsplash.com/photo-1516321497487-e288fb19713f?w=500" alt="Online learning">
+                    <div class="course-info">
+                        <h3>Digital Marketing</h3>
+                        <p>Discover modern marketing techniques.</p>
+                        <p class="rating">4.7 ★★★★★</p>
+                        <p>9,600 learners</p>
+                        <strong>₹499</strong>
+                    </div>
+                </article>
+
+                <article class="course-card">
+                    <img src="https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?w=500" alt="Website design">
+                    <div class="course-info">
+                        <h3>UI/UX Design Basics</h3>
+                        <p>Create user-friendly interfaces.</p>
+                        <p class="rating">4.5 ★★★★★</p>
+                        <p>6,400 learners</p>
+                        <strong>₹399</strong>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div>
+            <h2>Udemy Clone</h2>
+            <p>Learn new skills and grow your knowledge.</p>
+        </div>
+
+        <div class="footer-links">
+            <a href="#courses">Courses</a>
+            <a href="#topics">Topics</a>
+            <a href="#">About Us</a>
+            <a href="mailto:hello@example.com">Contact</a>
+        </div>
+
+        <p class="copyright">© 2026 Udemy Clone. Educational project.</p>
+    </footer>
+
+    <script>
+        function suggestTopic(event) {
+            event.preventDefault();
+
+            const topic = document.getElementById("topic-input").value.trim();
+            const message = document.getElementById("topic-message");
+
+            if (topic) {
+                message.textContent = "Your suggested topic: " + topic;
+                document.getElementById("topic-input").value = "";
+            }
+        }
+    </script>
+
+</body>
+</html>
